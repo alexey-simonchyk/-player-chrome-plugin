@@ -14,23 +14,21 @@ function addYoutubeButton() {
 
     if (!isWatchUrl(url)) return;
 
-    $(document).ready(() => {
-        var $menuContainer = $(`#${menuContainerId}`);
-        
-        if (!$menuContainer.length) {
-            repeatButtonCreation();
-            return;
-        }
+    var $menuContainer = $(`#${menuContainerId}`);
+    
+    if (!$menuContainer.length) {
+        repeatButtonCreation();
+        return;
+    }
 
-        var $button = $(`#${buttonId}`);
+    var $button = $(`#${buttonId}`);
 
-        if (!$button.length) {
-            $menuContainer.before($(`<div id="${buttonId}">Here</div>`));
-            repeatButtonCreation();
-        } else {
-            initButton($button);        
-        }
-    });
+    if (!$button.length) {
+        $menuContainer.before($(`<div id="${buttonId}">Here</div>`));
+        repeatButtonCreation();
+    } else {
+        initButton($button);        
+    }
 }
 
 function initButton($button) {
@@ -45,7 +43,6 @@ function initButton($button) {
     });
 }
 
-// because youtube is spa application, and blocks can apper after document is ready
 function repeatButtonCreation() {
     setTimeout(addYoutubeButton, 500);
 }
