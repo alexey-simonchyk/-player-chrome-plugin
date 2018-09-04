@@ -1,0 +1,60 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.player {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+iframe {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.item input {
+    padding: 5px;
+    font-size: 21px;
+    width: 340px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.youtubeImg {
+    width: 130px;
+    height: 130px;
+    background: url('youtube-large.png');
+}
+
+.button {
+    font-weight: 900;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+*:focus {
+    outline: none;
+}

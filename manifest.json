@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "name": "Player",
+    "version": "0.1",
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.youtube.com/*"
+        ],
+        "js": [
+          "jquery-3.3.1.min.js",
+          "content.js"
+        ]
+      }
+    ],
+  
+    "browser_action": {
+      "default_icon": "youtube.png"
+    },
+
+    "icons": {
+      "16": "youtube-bitty.png",
+      "48": "youtube-small.png",
+      "128": "youtube-large.png"
+    },
+  
+    "permissions": [
+      "contextMenus",
+      "tabs",
+      "activeTab",
+      "*://www.youtube.com/*",
+      "webRequest",
+      "webRequestBlocking"
+    ],
+  
+    "background": {
+      "scripts": [
+        "background.js"
+      ]
+    }
+  }
