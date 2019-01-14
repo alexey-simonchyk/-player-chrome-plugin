@@ -1,6 +1,8 @@
 var buttonId = 'playerButtonId';
 var menuContainerId = 'menu-container';
 var buttonWasCreated = false;
+var buttonStyles = "width: 30px; height: 30px; margin-top: 8px; cursor: pointer;";
+var buttonImageLink = "https://i.imgur.com/S0nS6dw.png"
 addYoutubeButton();
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -24,7 +26,7 @@ function addYoutubeButton() {
     var $button = $(`#${buttonId}`);
 
     if (!$button.length) {
-        $menuContainer.before($(`<div id="${buttonId}">Here</div>`));
+        $menuContainer.before($(`<img id="${buttonId}" src="${buttonImageLink}" style="${buttonStyles}"/>`));
         repeatButtonCreation();
     } else {
         initButton($button);        
